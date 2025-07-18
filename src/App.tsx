@@ -4,8 +4,12 @@ import { AuthFormControl } from './components/AuthFormControl/AuthFormControl';
 
 function App() {
   const theme = useTheme();
-  return <Container maxWidth={false} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh'}}>
-    <Box sx={{'display': "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "60px 96px", backgroundColor: theme.palette.customGrey[95], border: `1px solid ${theme.palette.customGrey[80]}`, width: '552px'}}>
+  return <Container 
+    
+    maxWidth={false} 
+    // sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh'}}
+    >
+    <Box className="bg" sx={{'display': "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "60px 96px", backgroundColor: theme.palette.customGrey[95], border: `1px solid ${theme.palette.customGrey[80]}`, width: '552px'}}>
       <Typography variant='h1'>Вхід</Typography>
       <AuthFormControl sx={{width: '100%'}}>
         <InputLabel htmlFor="email-input">Email</InputLabel>
@@ -13,7 +17,9 @@ function App() {
       </AuthFormControl>
       <AuthFormControl>
         <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%'}}>
-          <InputLabel htmlFor="password-input">Пароль</InputLabel>
+          <InputLabel
+          className='bg-green p-100'
+          htmlFor="password-input">Пароль</InputLabel>
           <Typography variant='body1'>Забули пароль?</Typography>
         </Box>
         <Input placeholder='Ваш пароль' id='password-input'/>
