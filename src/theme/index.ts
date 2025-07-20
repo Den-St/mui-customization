@@ -1,11 +1,21 @@
-import { createTheme } from '@mui/material/styles';
+import { extendTheme } from '@mui/material/styles';
 import palette from './palette';
 import typography from './typography';
 import { spacing, breakpoints, shadows, transitions } from './styles';
 import components from './components';
 
-const theme = createTheme({
-  palette: palette,  
+const theme = extendTheme({
+  colorSchemes: {
+    light: {
+      palette: palette,
+    },
+    dark: {
+      palette: {
+        ...palette,
+        mode: 'dark',
+      },
+    },
+  }, 
   typography: typography, 
   spacing: spacing, 
   breakpoints: breakpoints,
