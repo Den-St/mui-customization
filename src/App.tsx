@@ -1,10 +1,12 @@
 import { Box, Button, Container, Input, InputLabel, Typography, useTheme } from '@mui/material'
 import DownloadIcon from '@mui/icons-material/Download';
 import { AuthFormControl } from './components/AuthFormControl/AuthFormControl';
+import { GridResponsiveTemplate } from './components/Grid';
 
 function App() {
   const theme = useTheme();
-  return <Container 
+  return <>
+  <Container 
     maxWidth={false} 
     sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh'}}
     >
@@ -26,6 +28,8 @@ function App() {
       <Button variant='primary' size='medium' endIcon={<DownloadIcon />}>Перейти до курсу</Button>
     </Box>
   </Container>
+  <GridResponsiveTemplate />
+  </>
 }
 
 export default App
