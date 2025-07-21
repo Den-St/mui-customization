@@ -36,7 +36,7 @@
   --breakpoint-xl: 96rem; /* 1536px */
   --breakpoint-2xl: 120rem; /* 1920px */
 
-   --color-primary-main: var(--mui-palette-primary-main);
+  --color-primary-main: var(--mui-palette-primary-main);
   --color-primary-light: var(--mui-palette-primary-light);
   --color-primary-dark: var(--mui-palette-primary-dark);
   --color-primary-contrastText: var(--mui-palette-primary-contrastText);
