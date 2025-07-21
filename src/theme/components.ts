@@ -137,6 +137,13 @@ const components: ThemeOptions['components'] = {
                 gap: '8px'
             }
         }
+    },
+    MuiRadio: {
+        styleOverrides: {
+            root: {
+                padding: '0',
+            }
+        },
     }
 };
 

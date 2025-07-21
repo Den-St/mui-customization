@@ -6,12 +6,12 @@ export const SignInForm = () => {
     const theme = useTheme();
 
     return <Container 
-        maxWidth={false} 
-        sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh'}} 
+            maxWidth={false} 
+            sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '100vh'}} 
         >
         <Box
-        component={'form'}
-        sx={{'display': "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "60px 96px", backgroundColor: theme.palette.customGrey[95], border: `1px solid ${theme.palette.customGrey[80]}`, width: '552px'}}
+            component={'form'}
+            sx={{'display': "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "60px 96px", backgroundColor: theme.palette.customGrey[95], border: `1px solid ${theme.palette.customGrey[80]}`, width: '552px'}}
         >
         <Typography variant='h1'>Вхід</Typography>
         <AuthFormControl>
