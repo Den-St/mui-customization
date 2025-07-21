@@ -14,7 +14,7 @@ export const SignInForm = () => {
         sx={{'display': "flex", flexDirection: "column", alignItems: "center", gap: "10px", padding: "60px 96px", backgroundColor: theme.palette.customGrey[95], border: `1px solid ${theme.palette.customGrey[80]}`, width: '552px'}}
         >
         <Typography variant='h1'>Вхід</Typography>
-        <AuthFormControl sx={{width: '100%'}}>
+        <AuthFormControl>
             <InputLabel htmlFor="email-input">Email</InputLabel>
             <Input placeholder='Ваш email' id='email-input'/>
         </AuthFormControl>

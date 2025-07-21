@@ -1,4 +1,17 @@
 import { Grid, useMediaQuery, useTheme } from "@mui/material"
+import type { SxProps, Theme } from "@mui/system";
+const gridStyles: SxProps<Theme> = (theme) => ({
+    width: {
+        xs: 100,
+        sm: 200,
+        md: 300,
+    },backgroundColor: {
+        xs: theme.palette.green[100],
+        sm: theme.palette.orange[50],
+        md: theme.palette.purple[200],
+    }, 
+    padding: '20px'
+});
 
 export const GridResponsiveTemplate = () => {
     const theme = useTheme();
@@ -7,15 +20,7 @@ export const GridResponsiveTemplate = () => {
     return <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} >
         {Array.from(Array(6)).map((_, index) => (
             <Grid key={index} 
-            sx={{width: {
-                xs: 100,
-                sm: 200,
-                md: 300,
-            },backgroundColor: {
-                xs: theme.palette.green[100],
-                sm: theme.palette.orange[50],
-                md: theme.palette.purple[200],
-            }, padding: '20px'}}
+            sx={gridStyles}
             size={{ xs: 2, sm: 4, md: 4 }}>{index + 1}</Grid>
         ))}
     </Grid>
